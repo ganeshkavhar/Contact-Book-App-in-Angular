@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2014 by original authors @ fontello.com</metadata>
+<defs>
+<font id="contact-manager-icons" horiz-adv-x="1000" >
+<font-face font-family="contact-manager-icons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="plus" unicode="&#xe800;" d="m0 209l0 282 359 0 0 359 282 0 0-359 359 0 0-282-359 0 0-359-282 0 0 359-359 0z" horiz-adv-x="1000" />
+<glyph glyph-name="save" unicode="&#xe801;" d="m68 332q0 22 15 38l76 76q16 16 38 16t38-16l164-165 366 367q16 16 38 16t38-16l76-76q15-16 15-38t-15-38l-404-404-76-76q-16-15-38-15t-38 15l-76 76-202 202q-15 16-15 38z" horiz-adv-x="1000" />
+<glyph glyph-name="revert" unicode="&#xe802;" d="m804 694q107-107 107-262 0-150-107-257l-84-84-79 80 84 84q74 74 74 177 0 108-74 183-72 72-180 72t-180-72l-153-155 141 0 0-109-335 0 0 334 112 0 0-147 156 156q103 103 259 103t259-103z m-271-791l-79 79 79 81 79-81z" horiz-adv-x="928" />
+<glyph glyph-name="edit" unicode="&#xe803;" d="m846 732q66-66 66-158t-66-157l-512-514-316 0 1 318 511 511q65 65 158 65t158-65z m-558-716l478 479-158 157-474-473q34 29 78 27t75-32q32-32 32-79t-32-79l1 0z" horiz-adv-x="928" />
+<glyph glyph-name="search" unicode="&#xe804;" d="m0 386q0 80 31 152t84 126 125 84 153 31 152-31 126-84 84-126 31-152q0-123-69-223l191-191q21-21 21-51 0-29-22-50t-50-21q-30 0-50 21l-191 191q-100-69-223-69-80 0-153 31t-125 83-84 126-31 153z m143 0q0-103 73-177t177-73 176 73 74 177-74 176-176 74-177-74-73-176z" horiz-adv-x="928.6" />
+<glyph glyph-name="delete" unicode="&#xe805;" d="m0 582v36q0 8 5 13t13 5h172l39 93q9 21 31 35t44 15h178q22 0 44-15t30-35l39-93h173q8 0 13-5t5-13v-36q0-8-5-13t-13-5h-54v-529q0-46-26-80t-63-34h-464q-37 0-63 33t-27 79v531h-53q-8 0-13 5t-5 13z m143-547q0-12 4-22t8-15 6-5h464q2 0 6 5t8 15 4 22v529h-500v-529z m71 83v321q0 8 5 13t13 5h36q8 0 13-5t5-13v-321q0-8-5-13t-13-5h-36q-8 0-13 5t-5 13z m54 518h250l-27 65q-4 5-9 6h-177q-6-1-10-6z m89-518v321q0 8 5 13t13 5h36q8 0 13-5t5-13v-321q0-8-5-13t-13-5h-36q-8 0-13 5t-5 13z m143 0v321q0 8 5 13t13 5h36q7 0 12-5t5-13v-321q0-8-5-13t-12-5h-36q-8 0-13 5t-5 13z" horiz-adv-x="785.7" />
+</font>
+</defs>
+</svg>

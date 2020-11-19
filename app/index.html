@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My Angular App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body ng-controller='ContactsTableController' on-beforeunload='notifyChanges()'>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <h1>Contact Book</h1>
+
+  <filter on-filter='applyFilter(newFilter)'></filter>
+  <pagination
+    range-calc='rangeCalculator(page, byPage, itemCount)'
+    page='page'
+    request-change='canChange()'
+    by-page='byPage'
+    item-count='(people | filter:filter).length'>
+  </pagination>
+
+  <button class="add" ng-click='createNewPerson()'>Add user</button>
+  <table>
+    <thead>
+      <tr>
+        <th ng-class='{asc: isThisSorting("lastName", "asc"),
+                      desc: isThisSorting("lastName", "desc")}'
+                      ng-click='toggleSorting("lastName")'>
+                      Last&nbsp;Name
+        </th>
+        <th ng-class='{asc: isThisSorting("firstName", "asc"),
+                      desc: isThisSorting("firstName", "desc")}'
+                      ng-click='toggleSorting("firstName")'>
+                      First&nbsp;Name
+        </th>
+        <th ng-class='{asc: isThisSorting("age", "asc"),
+                      desc: isThisSorting("age", "desc")}'
+                      ng-click='toggleSorting("age")'>
+                      Age
+        </th>
+        <th ng-class='{asc: isThisSorting("email", "asc"),
+                      desc: isThisSorting("email", "desc")}'
+                      ng-click='toggleSorting("email")'>
+                      Email
+        </th>
+        <th ng-class='{asc: isThisSorting("createdOn", "asc"),
+                      desc: isThisSorting("createdOn", "desc")}'
+                      ng-click='toggleSorting("createdOn")'>
+                      Created&nbsp;on
+        </th>
+        <th ng-class='{asc: isThisSorting("lastEdited", "asc"),
+                      desc: isThisSorting("lastEdited", "desc")}'
+                      ng-click='toggleSorting("lastEdited")'>
+                      Last&nbsp;edited
+        </th>
+        <th ng-class='{asc: isThisSorting("isActive", "asc"),
+                      desc: isThisSorting("isActive", "desc")}'
+                      ng-click='toggleSorting("isActive")'>
+                      Active
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr ng-repeat='contact in contactsCtrl.people | paginate:paginationRange'> -->
+      <tr contact-edit='newPerson'
+          ng-if='newPerson'
+          on-edit='save(newPerson)'
+          on-cancel='destroyEmpty()'
+          >
+      </tr>
+      <tr
+        contact='person'
+        ng-if='!isBeingEdited(person)'
+        init-edit='startEditing(person)'
+        on-delete='delete(id)'
+        ng-repeat-start='person in (people | filter:filter | orderBy:sorting.field:sorting.order | range:rangeCalculator(page, byPage, people.length))'>
+      </tr>
+      <tr
+        contact-edit='person'
+        ng-if='isBeingEdited(person)'
+        on-edit='update(newPerson, person)'
+        on-cancel='revert(person)'
+        ng-repeat-end>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+
+</body>
+</html>

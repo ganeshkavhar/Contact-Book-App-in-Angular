@@ -1,0 +1,15 @@
+<tr >
+  <td colspan='7'>
+    <form ng-submit='trySave(contact)'>
+      <input type='text' required='Please provide last name' placeholder='Last Name' ng-model='contact.lastName'>
+      <input type='text' required='Please provide first name' placeholder='First Name'  ng-model='contact.firstName'>
+      <input type='number' placeholder='Age'  ng-model='contact.age'>
+      <input type='email' required='Please provide email' placeholder='Email'  ng-model='contact.email'>
+      <span style='color:red' ng-if='taken && contact.email==taken'>This email is already taken, please, try another one</span>
+      <input type="checkbox" ng-model='contact.isActive'>
+      <!-- <button ng-click='save({newPerson: contact})'>S</button> -->
+      <button title='Save changes' class='save' type='submit'></button>
+      <button title='Revert changes and get into view mode' class='revert' ng-click='revert(contact)'></button>
+    </form>
+  </td>
+</tr>

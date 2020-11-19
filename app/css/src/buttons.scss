@@ -1,0 +1,41 @@
+@mixin icon-button($name) {
+  @extend [class^="icon-"];
+  @extend .icon-#{$name};
+}
+button.small {
+  width: 27px;
+  padding: 5px;
+  padding-left: 4px;
+  margin-bottom: 0;
+}
+button.delete,
+button.edit,
+button.do-filter,
+button.save,
+button.revert {
+  @extend button.small;
+}
+button.delete {
+  @extend .alert;
+  @include icon-button(delete);
+}
+button.add {
+  @extend .secondary;
+  @include icon-button(plus);
+}
+button.edit {
+  @extend .secondary;
+  @include icon-button(edit);
+}
+button.do-filter {
+  @extend .secondary;
+  @include icon-button(search);
+}
+button.save {
+  @extend .success;
+  @include icon-button(save);
+}
+button.revert {
+  @extend .alert;
+  @include icon-button(revert);
+}

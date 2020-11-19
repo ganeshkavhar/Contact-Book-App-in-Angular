@@ -1,0 +1,46 @@
+{
+  "name": "contact-manager-icons",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "9dd9e835aebe1060ba7190ad2b2ed951",
+      "css": "search",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "12f4ece88e46abd864e40b35e05b11cd",
+      "css": "save",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "f48ae54adfb27d8ada53d0fd9e34ee10",
+      "css": "delete",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "667b873c8422e4cab006df8422cb51c5",
+      "css": "edit",
+      "code": 59395,
+      "src": "iconic"
+    },
+    {
+      "uid": "ce5e29aa5208417700e7f7012a236c00",
+      "css": "revert",
+      "code": 59394,
+      "src": "iconic"
+    },
+    {
+      "uid": "55e2ff85b1c459c383f46da6e96014b0",
+      "css": "plus",
+      "code": 59392,
+      "src": "elusive"
+    }
+  ]
+}

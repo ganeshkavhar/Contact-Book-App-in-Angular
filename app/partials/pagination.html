@@ -1,0 +1,12 @@
+<div class='pagination'>
+  <a href=''
+     ng-click='decreasePage()'
+     ng-if='range.lower > 1'>
+    « Previous 10 users
+  </a>
+  <span ng-class='{followed: range.upper < itemCount}' ng-if='itemCount !== 0'>Showing {{range.lower}}-{{range.upper}} of {{itemCount}} users</span>
+  <span ng-if='itemCount === 0'>Nothing to page through. =(</span>
+  <a href='' ng-click='increasePage()' ng-if='range.upper < itemCount'>
+    Next 10 users »
+  </a>
+</div>

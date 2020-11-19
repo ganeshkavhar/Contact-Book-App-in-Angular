@@ -1,0 +1,145 @@
+@import "vendor/normalize";
+@import "vendor/foundation";
+@import "vendor/fontello/css/contact-manager-icons-embedded";
+@import "buttons";
+
+// body would serve as usual .container class
+body {
+  padding: 5px;
+  max-width: 1360px;
+  margin: auto;
+  width: 100%;
+}
+.filter-widget {
+  width: 300px;
+  position: relative;
+  display: block;
+  input[type=search] {
+    $placeholder-padding: 30px;
+    padding-left: $placeholder-padding + 2;
+    // didn't add webkit, because paddings stacked & created gap
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      padding-left: $placeholder-padding;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      padding-left: $placeholder-padding;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      padding-left: $placeholder-padding;
+    }
+  }
+  .do-filter {
+    line-height: 100%;
+    display: inline-block;
+    left: 5px;
+    top: 7px;
+    position: absolute;
+  }
+}
+.pagination {
+  $aboveTableLine: 15px;
+  padding: $aboveTableLine;
+  display: inline-block;
+  a + span:before {
+    content: ' | ';
+  }
+  span.followed:after {
+    content: ' | ';
+  }
+  & + button {
+    $spaceBtwIconText: 20;
+    float: right;
+    margin-bottom: $aboveTableLine / 2;
+    padding: $aboveTableLine $aboveTableLine*2  $aboveTableLine $aboveTableLine*2 - $spaceBtwIconText;
+    &:before {
+      color: green;
+      font-weight: bolder;
+      float: left;
+      margin-right: #{$spaceBtwIconText}px;
+    }
+  }
+}
+table {
+  width: 100%;
+  $big-clmn: 25%;
+  $med-clmn: 16.5%;
+  $sml-clmn: 8%;
+  $last-clmn: 9.5%;
+  $all-sizes: $big-clmn, $med-clmn, $sml-clmn, $big-clmn, $sml-clmn, $sml-clmn, $last-clmn;
+  $input-interspace: 5px;
+  @for $i from 1 through 7 {
+    thead tr th:nth-child(#{$i}),
+    tbody tr td:nth-child(#{$i}) {
+      width: nth($all-sizes, $i);
+    }
+    @if $i < 5 {
+      tbody form input:nth-child(#{$i}) {
+        width: calc(#{nth($all-sizes, $i)} - #{$input-interspace});
+      }
+    }
+  }
+  thead tr th:last-child,
+  tbody tr th:last-child {
+    min-width: 94px;
+  }
+  // form
+  td[colspan='7'] {
+    padding: 0;
+  }
+  tbody form {
+    padding: 2px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    input[type] + input[type] {
+      margin-left: $input-interspace - 2;
+    }
+    input[type='text'],
+    input[type='number'],
+    input[type='email'] {
+      padding: 0px;
+      margin-bottom: 2px;
+      display: inline-block;
+    }
+    input[type='email'] {
+      margin-right: calc(#{$sml-clmn * 2} + 2px);
+    }
+  }
+
+  thead tr {
+    border: 1px solid #919191;
+  }
+  thead tr th {
+    background-color: #636363;
+    color: white;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 5px;
+    & + th {
+      border-left: 1px solid #919191;
+    }
+    &.asc:after, &.desc:after {
+      float: right;
+      position: absolute;
+      right: 5px;
+      top: 8px;
+    }
+    &.asc:after {
+      content: '▾';
+    }
+    &.desc:after {
+      content: '▴';
+    }
+  }
+  tbody tr {
+    & td:last-child {
+      vertical-align: middle;
+      span {
+        color: green;
+        font-weight: bolder;
+      }
+    }
+    td {
+      vertical-align: top;
+    }
+  }
+}

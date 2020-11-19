@@ -1,0 +1,4 @@
+please find instructions and implement what you think right and cover
+it with tests
+
+please do not spend more than 6-8 hours
