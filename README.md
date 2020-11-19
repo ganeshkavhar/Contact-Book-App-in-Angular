@@ -1,4 +1,3 @@
 # Angular Contact Book
-[![Build Status]()  
-[See it yourself]().  
-Best viewed in Chrome.  
+[![Build Status](https://angular-contact-book.glitch.me)  
+[Live App](https://angular-contact-book.glitch.me).  
